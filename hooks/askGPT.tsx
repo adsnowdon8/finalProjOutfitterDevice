@@ -1,5 +1,5 @@
 export const askGpt = async (prompt: string) => {
-  const API_KEY = "AIzaSyB2CUMKgK85XmSREn8MgOAKoCI6zF6d8v0";
+  const API_KEY = "[ENTER GOOGLE API KEY]";
   const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${API_KEY}`;
   const body = {
     contents: [{ parts: [{ text: prompt }] }],

@@ -11,15 +11,6 @@ export const locationThenWeather = async (
           setLocation(
             data["city"] + ", " + data["region"] + ", " + data["country"]
           );
-          const weatherApiKey = "AIzaSyDCJS2urx3-4O7hz5iwjyyNZlldydBd_4U";
-
-          const key = "83c8773cdf537954463c18e83113c811";
-          const url = `https://api.openweathermap.org/data/3.0/onecall?lat=${latitude}&lon=${longitude}&appid${key}`;
-          // console.log("url", url);
-          // const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${weatherApiKey}&units=metric`;
-          const weatherUrl = `https://weather.googleapis.com/v1/forecast/hours:lookup?key=${weatherApiKey}&location.latitude=${latitude}&location.longitude=${longitude}`;
-          // console.log("weatherUrl", weatherUrl);
-
           const weather = `https://api.weather.gov/points/${latitude},${longitude}`;
           return fetch(weather);
         })
